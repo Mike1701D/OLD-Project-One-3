@@ -1,0 +1,45 @@
+body { 
+  background-image: url("../images/background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; 
+}
+
+h1 {
+	color: black;
+	text-align: center;
+	font-size:  65px;
+	background-color:  transparent;
+	font-family: impact;
+}
+
+#dog-buttons {
+	font-size: 20px;
+	margin-left: 60px;
+	font-family:  times;
+}
+
+#add-dog {
+	font-size: 20px;
+	font-family:  times;
+}
+
+.jumbotron {
+   background-color:  transparent;
+   color:  black;
+   margin-left: 20px;
+}
+
+#dogs-form {
+	margin-left: 40px;
+}
+
+h2 {
+	margin-left: 60px;
+	font-weight: bold;
+	font-color: black;
+}
+
+form {
+	margin-left: 100px;
+}
