@@ -16,13 +16,16 @@ $(document).ready(function() {
         }
     }
 
-    // Listen for Button Clicks and Download Gif
+
+
+    // Listen for Button Clicks, Validate Input, Download Movie Info and Trailer
     $(document).on("click", ".createDogGifs", function() {
-        $("#dog-gallery").empty();
-        $("#dog-gallery").append("<h2>" + newDogClick +"<h2>");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-            encodeURI(newDogClick) + "&api_key=dc6zaTOxFJmzC&limit=10&rating=g";
-        $.ajax({
+        if (str.indexOf("Yes") >= 0) {
+            $("#dog-gallery").empty();
+            $("#dog-gallery").append("<h2>" + newDogClick + "<h2>");
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+                encodeURI(newDogClick) + "&api_key=dc6zaTOxFJmzC&limit=10&rating=g";
+            $.ajax({
                 url: queryURL,
                 method: "GET"
             }).done(function(response) {
@@ -37,22 +40,10 @@ $(document).ready(function() {
                     $("#dog-gallery").append(gifDiv);
                 }
             });
-        console.log(queryURL);
-    });
-
-    // Use startGif variable to track binary status of Gifs
-    $(document).on("click", ".Start", function() {
-        if (startGif === 0) {
-          startGif = 1;
-          $(this).attr("src", $(this).data("giphyData").images.fixed_width.url);
-          return;
+            console.log(queryURL);
         }
 
-        if (startGif === 1) {
-            $(this).attr("src", $(this).data("giphyData").images.fixed_width_still.url);
-            startGif = 0;
-        }
-       
+
     });
 
     renderButtonsZero();
