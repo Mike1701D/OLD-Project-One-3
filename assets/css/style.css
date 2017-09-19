@@ -13,13 +13,13 @@ h1 {
 	font-family: impact;
 }
 
-#dog-buttons {
+#movie-buttons {
 	font-size: 20px;
 	margin-left: 60px;
 	font-family:  times;
 }
 
-#add-dog {
+#add-movie {
 	font-size: 20px;
 	font-family:  times;
 }
@@ -30,7 +30,11 @@ h1 {
    margin-left: 20px;
 }
 
-#dogs-form {
+#video-placeholder{
+	margin-left: 60px;
+}
+
+#movies-form {
 	margin-left: 40px;
 }
 
